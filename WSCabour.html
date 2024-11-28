@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+     nav{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 4x;
+    border: #BF307F 0.5px solid;
+  }
+  nav a{
+    padding: 60px;
+    color:  #BF307F;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+  }
+  body{
+    background-color: #151226;
+  }
+  .tab {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 80px;
+}
+.tab button {
+    width: 28%;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    background-color:  #151226;
+    color:#BF307F ;
+}
+
+.tab button.active {
+   background-color: #BF307F;
+    color:  #151226 ;
+}
+
+.tabcontent {
+    border: #BF307F 2px dashed;
+    margin-top: 5%;
+    width: 30%;
+    margin-left: 35%;
+}
+.tabcontent p{
+  text-align: center;
+  color: white;
+  padding: 30px;
+} 
+
+footer{
+  background-color: #BF307F;
+  text-align: center;
+  color: black;
+  
+}
+
+   </style>
+</head>
+<body>
+    <nav>
+        <a href="WorkSpaceConect.html">Home</a>
+        <img src="./media/logoWSC.png" width="150px" height="150px" alt="" href="WorkSpaceConect.html">
+        <a href="WSCabour.html">About</a>    
+</nav><div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">What is the purpose od the virtual office?</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Is the virtual office free?</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">How can businesses benefit from integrating your virtual office app into their workflow?</button>
+  </div>
+  
+  <div id="London" class="tabcontent">
+    <div style="display: flex;justify-content: space-around;"><img src="./media/aa-removebg-preview.png" width="100px" height="100px"><img src="./media/dd-removebg-preview.png" width="100px" height="100px" alt=""></div>
+    <p>The purpose of our virtual office app is to revolutionize the way teams collaborate and work remotely. By providing a comprehensive platform that seamlessly integrates communication, collaboration, and productivity tools, our app aims to empower businesses to thrive in the digital age, enabling teams to connect, brainstorm, and execute projects efficiently from anywhere in the world.</p>
+    <div style="display: flex;justify-content: space-around;"><img src="./media/dd-removebg-preview.png" width="100px" height="100px" alt=""><img src="./media/aa-removebg-preview.png" width="100px" height="100px"></div>
+  </div>
+  
+  <div id="Paris" class="tabcontent">
+    <div style="display: flex;justify-content: space-around;"><img src="./media/aa-removebg-preview.png" width="100px" height="100px"><img src="./media/dd-removebg-preview.png" width="100px" height="100px" alt=""></div>
+    <p>While we offer a free trial for one week, our virtual office app is not free beyond that period. We believe this trial period allows users to experience the full range of features and capabilities our platform offers before making a commitment. After the trial period, users can choose from our subscription plans to continue accessing our virtual office services.</p> 
+    <div style="display: flex;justify-content: space-around;"><img src="./media/dd-removebg-preview.png" width="100px" height="100px" alt=""><img src="./media/aa-removebg-preview.png" width="100px" height="100px"></div>
+  </div>
+  
+  <div id="Tokyo" class="tabcontent">
+    <div style="display: flex;justify-content: space-around;"><img src="./media/aa-removebg-preview.png" width="100px" height="100px"><img src="./media/dd-removebg-preview.png" width="100px" height="100px" alt=""></div>
+    <p>By leveraging our virtual office app, businesses can streamline communication, boost team engagement, reduce operational costs associated with physical office spaces, and empower their workforce to work collaboratively from anywhere in the world.</p>
+    <div style="display: flex;justify-content: space-around;"><img src="./media/dd-removebg-preview.png" width="100px" height="100px" alt=""><img src="./media/aa-removebg-preview.png" width="100px" height="100px"></div>
+  </div>
+  <br>
+  <footer>
+    <p>Copyright by WorkSpaceConect    <a  href="https://www.instagram.com/workspace_connect/" style="color: black;"><i class="fa fa-instagram" style="font-size: 20px; margin-left: 5px;"></i></a> <a href="https://www.facebook.com/profile.php?id=61555460291303" style="color: black;"> <i class="fa fa-facebook" style="font-size: 20px;margin-left: 5px;"></i> </a></p>
+  </footer>
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+  
+    document.getElementById("defaultOpen").click();
+    </script>
+       
+
+</body>
+</html>
